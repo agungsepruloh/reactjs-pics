@@ -1,5 +1,6 @@
 import React from "react";
-import unsplash from "../api/unsplash";
+import unsplash from "../api/Unsplash";
+import ImageList from "./ImageList";
 import SearchBar from "./SearchBar";
 
 class App extends React.Component {
@@ -24,7 +25,7 @@ class App extends React.Component {
         {/* Invoking callbacks in children */}
         {/* call back function to its children / passing callback function to its child */}
         <SearchBar onSubmit={this.onSearchSubmit} />
-        Found: {this.state.images.length} images
+        <ImageList images={this.state.images} />
       </div>
     );
   }
